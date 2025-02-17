@@ -27,6 +27,7 @@ import {
   RocketLaunchIcon,
   Bars2Icon,
 } from "@heroicons/react/24/solid";
+import { Link } from "react-router";
 
 // profile menu component
 const profileMenuItems = [
@@ -108,31 +109,37 @@ function ProfileMenu() {
 const navListItems = [
   {
     label: "Shop",
+    navigate: "/shop",
     icon: CiShoppingBasket,
   },
   {
     label: "Contact",
     icon: MdConnectWithoutContact,
+    navigate: "/contact",
   },
 ];
 
 function NavList() {
   return (
     <ul className="mt-2  mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-      {navListItems.map(({ label, icon }, key) => (
-        <Typography
-          key={label}
-          as="a"
-          href="#"
-          variant="small"
-          color="gray"
-          className="font-medium text-blue-gray-500"
-        >
-          <MenuItem className="flex items-center gap-2 lg:rounded-full">
-            {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
-            <span className="text-gray-900 font-Nunito"> {label}</span>
-          </MenuItem>
-        </Typography>
+      {navListItems.map(({ label, icon, navigate }, key) => (
+        <>
+          <Link to={navigate}>
+            <Typography
+              key={label}
+              as="a"
+              href="#"
+              variant="small"
+              color="gray"
+              className="font-medium text-blue-gray-500"
+            >
+              <MenuItem className="flex items-center gap-2 lg:rounded-full">
+                {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
+                <span className="text-gray-900 font-Nunito"> {label}</span>
+              </MenuItem>
+            </Typography>
+          </Link>
+        </>
       ))}
       <Button
         className="text-sm text-primary font-Nunito font-semibold"
@@ -160,13 +167,14 @@ export function EcommerceNavbar() {
   return (
     <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6">
       <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          className="mr-4 ml-2 cursor-pointer py-1.5  font-bold font-anekbangla text-primary "
-        >
-          Laraz
-        </Typography>
+        <Link to={"/"}>
+          <Typography
+            as="a"
+            className="mr-4 ml-2 cursor-pointer py-1.5  font-bold font-anekbangla text-primary "
+          >
+            Laraz
+          </Typography>
+        </Link>
         <div className="mx-auto hidden lg:block">
           <NavList />
         </div>

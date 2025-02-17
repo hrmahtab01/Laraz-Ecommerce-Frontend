@@ -130,12 +130,12 @@ function NavList() {
         >
           <MenuItem className="flex items-center gap-2 lg:rounded-full">
             {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
-            <span className="text-gray-900"> {label}</span>
+            <span className="text-gray-900 font-Nunito"> {label}</span>
           </MenuItem>
         </Typography>
       ))}
       <Button
-        className="text-sm text-primary font-semibold"
+        className="text-sm text-primary font-Nunito font-semibold"
         size="sm"
         variant="text"
       >

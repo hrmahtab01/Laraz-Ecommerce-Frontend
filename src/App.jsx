@@ -5,6 +5,9 @@ import Home from "./Pages/Home";
 import About from "./Components/About";
 import Shop from "./Pages/Shop";
 import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import ProductDetails from "./Pages/ProductDetails";
+import Cart from "./Pages/Cart";
 
 const App = () => {
   return (
@@ -15,6 +18,9 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/shop/:productdetails" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>

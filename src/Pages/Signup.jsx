@@ -4,7 +4,7 @@ import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router";
 
-export function Login() {
+export function Signup() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
 
@@ -12,12 +12,34 @@ export function Login() {
     <section className="grid text-center h-screen items-center p-8">
       <div>
         <Typography variant="h3" color="blue-gray" className="mb-2">
-          Log In
+          Sign Up
         </Typography>
         <Typography className="mb-16 text-black font-normal font-Nunito text-[18px]">
-          Enter your email and password to Log in
+          Enter your name email and password to Sign Up
         </Typography>
         <form action="#" className="mx-auto max-w-[24rem] text-left">
+          <div className="mb-6">
+            <label htmlFor="email">
+              <Typography
+                variant="small"
+                className="mb-2 block font-medium text-black font-Nunito"
+              >
+                Your Name
+              </Typography>
+            </label>
+            <Input
+              id="name"
+              color="gray"
+              size="lg"
+              type="name"
+              name="name"
+              placeholder="Your Name"
+              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              labelProps={{
+                className: "hidden",
+              }}
+            />
+          </div>
           <div className="mb-6">
             <label htmlFor="email">
               <Typography
@@ -93,11 +115,9 @@ export function Login() {
             color="gray"
             className="!mt-4 text-center font-normal font-Nunito"
           >
-            Not registered?{" "}
-            <Link to={"/signup"}>
-              <a className="font-medium text-black font-Nunito">
-                Create account
-              </a>
+            Already have an account?{" "}
+            <Link to={"/login"}>
+              <a className="font-medium text-black font-Nunito">Log In</a>
             </Link>
           </Typography>
         </form>
@@ -106,4 +126,4 @@ export function Login() {
   );
 }
 
-export default Login;
+export default Signup;

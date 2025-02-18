@@ -14,6 +14,7 @@ import {
 } from "@material-tailwind/react";
 import { CiShoppingBasket } from "react-icons/ci";
 import { MdConnectWithoutContact } from "react-icons/md";
+import { FcAbout } from "react-icons/fc";
 import {
   CubeTransparentIcon,
   UserCircleIcon,
@@ -113,9 +114,9 @@ const navListItems = [
     icon: CiShoppingBasket,
   },
   {
-    label: "Contact",
-    icon: MdConnectWithoutContact,
-    navigate: "/contact",
+    label: "About Us",
+    icon: FcAbout,
+    navigate: "/about",
   },
 ];
 
@@ -141,13 +142,15 @@ function NavList() {
           </Link>
         </>
       ))}
-      <Button
-        className="text-sm text-primary font-Nunito font-semibold"
-        size="sm"
-        variant="text"
-      >
-        <span>Log In</span>
-      </Button>
+      <Link to={"/login"}>
+        <Button
+          className="text-sm text-primary font-Nunito font-semibold"
+          size="sm"
+          variant="text"
+        >
+          <span>Log In</span>
+        </Button>
+      </Link>
     </ul>
   );
 }

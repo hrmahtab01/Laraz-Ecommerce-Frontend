@@ -34,7 +34,7 @@ export function Signup() {
               type="name"
               name="name"
               placeholder="Your Name"
-              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              className="w-full placeholder:opacity-100 focus:border-t-red-500 border-t-blue-gray-200"
               labelProps={{
                 className: "hidden",
               }}
@@ -56,7 +56,7 @@ export function Signup() {
               type="email"
               name="email"
               placeholder="name@mail.com"
-              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              className="w-full placeholder:opacity-100 focus:border-t-red-500 border-t-blue-gray-200"
               labelProps={{
                 className: "hidden",
               }}
@@ -77,7 +77,7 @@ export function Signup() {
               labelProps={{
                 className: "hidden",
               }}
-              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              className="w-full placeholder:opacity-100 focus:border-t-red-500 border-t-blue-gray-200"
               type={passwordShown ? "text" : "password"}
               icon={
                 <i onClick={togglePasswordVisiblity}>
@@ -96,19 +96,9 @@ export function Signup() {
             className="mt-6 bg-primary hover:bg-black duration-300"
             fullWidth
           >
-            sign in
+            sign Up
           </Button>
-          <div className="!mt-4 flex justify-end">
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              variant="small"
-              className="font-medium"
-            >
-              Forgot password
-            </Typography>
-          </div>
+          <div className="!mt-4 flex justify-end"></div>
 
           <Typography
             variant="small"

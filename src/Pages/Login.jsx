@@ -34,7 +34,7 @@ export function Login() {
               type="email"
               name="email"
               placeholder="name@mail.com"
-              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              className="w-full placeholder:opacity-100 focus:border-t-red-500 border-t-blue-gray-200"
               labelProps={{
                 className: "hidden",
               }}
@@ -55,7 +55,7 @@ export function Login() {
               labelProps={{
                 className: "hidden",
               }}
-              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              className="w-full placeholder:opacity-100 focus:border-t-red-500 border-t-blue-gray-200"
               type={passwordShown ? "text" : "password"}
               icon={
                 <i onClick={togglePasswordVisiblity}>
